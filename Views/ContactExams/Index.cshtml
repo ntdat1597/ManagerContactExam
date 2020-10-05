@@ -87,3 +87,12 @@
     }
 
 </table>
+<div class="row">
+    <div class="col-sm-12 col-md-10">
+        Current @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount Page
+    </div>
+    <div class="col-sm-12 col-md-2">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, @class = "btn btn-sm btn-primary" }))
+
+    </div>
+</div>
