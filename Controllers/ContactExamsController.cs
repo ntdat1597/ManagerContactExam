@@ -16,10 +16,7 @@ namespace ManagerContactExam.Controllers
         private ManagerContactsInformationEntities db = new ManagerContactsInformationEntities();
 
         // GET: ContactExams
-        public ActionResult Index()
-        {
-            return View(db.ContactExams.ToList());
-        }
+      
 
         public ViewResult Index(string sortOrder, string search, string currentFilter, int? page)
         {
